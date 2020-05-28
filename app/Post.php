@@ -6,7 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
-    protected $appends = ['post_name', 'post_extract'];
+    protected $fillable = ['title', 'body'];
+
+    protected $appends = ['post_extract'];
 
     public function getPostExtractAttribute()
     {
